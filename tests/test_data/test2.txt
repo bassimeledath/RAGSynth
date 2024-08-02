@@ -1,0 +1,16 @@
+Neural networks vs. deep learning
+Deep Learning and neural networks tend to be used interchangeably in conversation, which can be confusing. As a result, it’s worth noting that the “deep” in deep learning is just referring to the depth of layers in a neural network. A neural network that consists of more than three layers—which would be inclusive of the inputs and the output—can be considered a deep learning algorithm. A neural network that only has two or three layers is just a basic neural network.
+
+To learn more about the differences between neural networks and other forms of artificial intelligence,  like machine learning, please read the blog post “AI vs. Machine Learning vs. Deep Learning vs. Neural Networks: What’s the Difference?”
+
+A diagram depicting the layers of a deep neural network
+History of neural networks
+The history of neural networks is longer than most people think. While the idea of “a machine that thinks” can be traced to the Ancient Greeks, we’ll focus on the key events that led to the evolution of thinking around neural networks, which has ebbed and flowed in popularity over the years:
+
+1943: Warren S. McCulloch and Walter Pitts published “A logical calculus of the ideas immanent in nervous activity (link resides outside ibm.com)” This research sought to understand how the human brain could produce complex patterns through connected brain cells, or neurons. One of the main ideas that came out of this work was the comparison of neurons with a binary threshold to Boolean logic (i.e., 0/1 or true/false statements).   
+
+1958: Frank Rosenblatt is credited with the development of the perceptron, documented in his research, “The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain” (link resides outside ibm.com). He takes McCulloch and Pitt’s work a step further by introducing weights to the equation. Leveraging an IBM 704, Rosenblatt was able to get a computer to learn how to distinguish cards marked on the left vs. cards marked on the right.
+
+1974: While numerous researchers contributed to the idea of backpropagation, Paul Werbos was the first person in the US to note its application within neural networks within his PhD thesis (link resides outside ibm.com).
+
+1989: Yann LeCun published a paper (link resides outside ibm.com) illustrating how the use of constraints in backpropagation and its integration into the neural network architecture can be used to train algorithms. This research successfully leveraged a neural network to recognize hand-written zip code digits provided by the U.S. Postal Service.
