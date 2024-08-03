@@ -1,22 +1,28 @@
 from typing import Optional
-from models import Model, OpenAIModel
-from data_handler import DataHandler
-from qa_generator import QAGenerator
+import os
+from .models import Model, OpenAIModel
+from .data_handler import DataHandler
+from .qa_generator import QAGenerator
 
 
 class EvalDataGenerator:
 
     def __init__(self,
                  path: str,
-                 model: Optional[Model] = None,
-                 k: int = 5):
+                 model: Optional[Model] = None):
         self.path = path
-        self.model = model or OpenAIModel()
-        self.k = k
 
-    def generate(self):
-        data_handler = DataHandler(self.path)
-        top_k_chunks = data_handler.get_k_chunks(self.k)
+        if model is None:
+            if "OPENAI_API_KEY" not in os.environ:
+                raise Exception("OPENAI_API_KEY is not set in the environment variables. "
+                                         "Please set it or provide a custom model.")
+            self.model = OpenAIModel()
+        else:
+            self.model = model
+        self.data = DataHandler(self.path)
+
+    def generate(self, k: int = 5):
+        top_k_chunks = self.data.get_k_chunks(k)
         qa_generator = QAGenerator(self.model)
         eval_dataset = qa_generator.generate_eval_dataset(top_k_chunks)
         return eval_dataset

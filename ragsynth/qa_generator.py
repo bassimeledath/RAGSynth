@@ -3,7 +3,7 @@ import re
 from typing import List, Dict
 from tqdm import tqdm
 from tenacity import retry, stop_after_attempt, wait_fixed
-from models import Model
+from .models import Model
 
 class QAGenerator:
     def __init__(self, model: Model):
